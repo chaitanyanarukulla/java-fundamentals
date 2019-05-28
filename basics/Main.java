@@ -38,14 +38,15 @@ public class Main {
     System.out.println("It took " + totalflips + " flips to flip " + n + " heads in a row.");
   }
   public static void clock(){
-    LocalDateTime prePrinttime = LocalDateTime.now();
     while(true){
-      LocalDateTime curPrintTime = LocalDateTime.now();
-      if(prePrinttime.getSecond() != curPrintTime.getSecond()){
-        prePrinttime = curPrintTime;
-        System.out.println(curPrintTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+      LocalDateTime now = LocalDateTime.now();
+      String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+      System.out.println(time);
+      try{
+        Thread.sleep(1000);
+      }catch(InterruptedException ex){
+        Thread.currentThread().interrupt();
       }
-    
     }
   }
 }
