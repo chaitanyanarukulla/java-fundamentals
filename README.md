@@ -15,3 +15,10 @@ Reverse an Array
     - iterate through array, calculating total sum and dividing by length of array to obtain average
   - Lowest Average
     - iterate through array of arrays to find which array has the lowest average
+
+## Lab 3 |  Maps, File I/O, and Testing
+
+### Challenges
+
+- Analyzing Weather Data using HashSet
+- Tallying Election using List
