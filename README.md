@@ -22,3 +22,4 @@ Reverse an Array
 
 - Analyzing Weather Data using HashSet
 - Tallying Election using List
+- linter   Method that reads a JavaScript file with a given Path, and prints an error whenever it finds a line that doesn’t end in a semi-colon.
