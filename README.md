@@ -25,6 +25,24 @@ Reverse an Array
 - linter   Method that reads a JavaScript file with a given Path, and prints an error whenever it finds a line that doesn’t end in a semi-colon.
 
 
+## Lab 6 |  inheritance Vs Interfaces
+
+### Challenges
+
+- Create a class to represent a Restaurant. Each Restaurant should have a name, a number of stars betweeen 0 and 5, and a price category (i.e. number of dollar signs).
+Implement a Restaurant constructor.
+Test that your Restaurant constructor is behaving reasonably.
+Implement a reasonable toString method for Restaurants.
+Write a test to create an instance of Restaurant and ensure that its toString is working properly.
+- Create a class to represent a Review. Each Review should have a body, an author, and a number of stars.
+Write a Review constructor.
+Test that your constructor is working reasonably.
+Implement a reasonable toString method for Reviews.
+Write a test to create an instance of Review and ensure that its toString is working properly.
+- Add an instance method addReview to your Restaurant class. This method should take in a Review instance, and associate that review with this Restaurant. The specific methodology for this will vary, depending on the implementation you chose above.
+Add tests to ensure that when you call addReview, the association is created between the Restaurant and the Review.
+
+
 ```
 └── java-fundamentals
 ├── LICENSE
