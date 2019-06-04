@@ -9,7 +9,9 @@ public class Restaurant{
     private String priceCategory;
     private ArrayList<Review> reviews;
 
-    public Restaurant(String name,double stars, String priceCategory,ArrayList reviews){
+    public Restaurant(){};
+
+    public Restaurant(String name,double stars, String priceCategory){
         this.name = name;
         this.stars = stars;
         this.priceCategory = priceCategory;
@@ -29,6 +31,6 @@ public class Restaurant{
     }
 
     public String toString() {
-        return String.format("A Resturant  named %s has a review average of %d if and is in the %e price range", this.name, this.stars,this.priceCategory);
+        return String.format("A Resturant  named %s has a  average review of %d  and is in the %e price range", this.name, this.stars,this.priceCategory);
     }
 }
