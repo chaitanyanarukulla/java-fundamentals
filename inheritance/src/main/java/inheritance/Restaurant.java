@@ -1,34 +1,54 @@
 package inheritance;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Restaurant{
 
     private String name;
-    private double stars;
+    private Integer stars;
     private String priceCategory;
-    private ArrayList<Review> reviews;
+    private long totalStars;
+    private long numOfReviews;
+    ArrayList<Review> reviews = new ArrayList<>();
 
-    public Restaurant(String name,double stars, String priceCategory,ArrayList reviews){
+    public Restaurant(String name, String priceCategory) {
         this.name = name;
-        this.stars = stars;
         this.priceCategory = priceCategory;
-        this.reviews = new ArrayList<>();
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public double getStars() {
-        return stars;
+    public Integer getStars() {
+        return this.stars;
     }
 
     public String getpriceCategory() {
-        return priceCategory;
+        return this.priceCategory;
     }
 
+    public boolean containsReview(Review review) {
+        return reviews.contains(review);
+    }
+
+    public void addReview(Review review) {
+        Review newReview = review;
+        newReview.setRestaurant(this);
+        numOfReviews++;
+        totalStars += newReview.getStars();
+        reviews.add(newReview);
+        update_Stars();
+    }
+
+    public void update_Stars() {
+        stars = (int)(totalStars / numOfReviews);
+    }
+
+    @Override
     public String toString() {
-        return String.format("A Resturant  named %s has a review average of %d if and is in the %e price range", this.name, this.stars,this.priceCategory);
+        String avgStars = stars == null ? "No Stars" : Integer.toString(stars);
+        return String.format("Restaurant Name: %s\nPrice: %s \nNumber of Stars: %s", name, priceCategory, stars);
     }
 }
