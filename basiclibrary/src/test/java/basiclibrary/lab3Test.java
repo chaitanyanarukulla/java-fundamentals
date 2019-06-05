@@ -26,7 +26,9 @@ public class lab3Test {
         lab3 classUndertest = new lab3();
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
+        votes.add("Shrub");
         votes.add("Bush");
+        votes.add("Hedge");
         votes.add("Bush");
         votes.add("Shrub");
         votes.add("Hedge");
