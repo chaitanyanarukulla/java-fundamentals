@@ -32,9 +32,6 @@ public class RestaurantTest {
     public void test_getStars() {
     }
 
-    @Test
-    public void test_getpriceCategory() {
-    }
 
     @Test
     public void test_toString1() {
