@@ -150,3 +150,8 @@ Add tests to ensure that when you call addReview, the association is created bet
             └── resources
 
 ```
+### Resourses
+Shout out to fellow students who helpd me out with this Labs
+And some test in this lab  are mirrored from these repos
+Tisha M Greenidge : https://github.com/tgreenidge/java-fundamentals
+Will Fritts : https://github.com/wafman/java-fundamentals
