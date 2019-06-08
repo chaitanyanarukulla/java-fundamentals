@@ -104,12 +104,18 @@ Add tests to ensure that when you call addReview, the association is created bet
 │       │   │       ├── Library.java
 │       │   │       ├── Restaurant.java
 │       │   │       └── Review.java
+|       |   |       ├── Shop.java
+│       │   │       ├── Theater.java
+|       |   |
 │       │   └── resources
 │       └── test
 │           ├── java
 │           │   └── inheritance
 │           │       ├── LibraryTest.java
 │           │       └── RestaurantTest.java
+│           │       └── ReviewTest.java
+|           |       ├── ShopTest.java
+│           │       ├── TheaterTest.java
 │           └── resources
 └── linter
     ├── build.gradle
