@@ -25,7 +25,7 @@ Reverse an Array
 - linter   Method that reads a JavaScript file with a given Path, and prints an error whenever it finds a line that doesn’t end in a semi-colon.
 
 
-## Lab 6 |  inheritance Vs Interfaces
+## Lab 6 | Lab7 |  inheritance Vs Interfaces
 
 ### Challenges
 
