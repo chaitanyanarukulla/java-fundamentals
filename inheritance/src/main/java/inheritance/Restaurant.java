@@ -31,7 +31,7 @@ public class Restaurant{
         return reviews.contains(review);
     }
 
-    public void update_Stars() {
+    public void updateStars() {
         stars = (int)(totalStars / numOfReviews);
     }
 
@@ -41,8 +41,9 @@ public class Restaurant{
         numOfReviews++;
         totalStars += newReview.getStars();
         reviews.add(newReview);
-        update_Stars();
+        updateStars();
     }
+
 
     @Override
     public String toString() {
