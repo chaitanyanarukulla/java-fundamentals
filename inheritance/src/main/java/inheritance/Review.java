@@ -1,12 +1,13 @@
 package inheritance;
 
+
 public class Review {
     private String body;
     private String author;
     private Integer stars;
     private Restaurant restaurant;
-    private Shop shop;
     private Theater theater;
+    private Shop shop;
 
     public Review(String body, int stars, String author) {
         this.body = body;
@@ -14,30 +15,28 @@ public class Review {
         this.author = author;
     }
 
-    public Review(String body, Integer stars, String author,Restaurant restaurant) {
+    public Review(String body, int stars, String author, Restaurant restaurant) {
         this.body = body;
         this.stars = stars;
         this.author = author;
         this.restaurant = restaurant;
         restaurant.addReview(this);
-        restaurant.update_Stars();
     }
 
-    public Review(String body, Integer stars, String author,Shop shop) {
-        this.body = body;
-        this.stars = stars;
-        this.author = author;
-        this.shop = shop;
-//        Shop.addReview(this);
-//        Shop.update_Stars();
-    }
-    public Review(String body, Integer stars, String author,Theater theater) {
+    public Review(String body, int stars, String author, Theater theater) {
         this.body = body;
         this.stars = stars;
         this.author = author;
         this.theater = theater;
-//        theater.addReview(this);
-//        theater.update_Stars();
+        theater.addReview(this);
+    }
+
+    public Review(String body, int stars, String author, Shop shop) {
+        this.body = body;
+        this.stars = stars;
+        this.author = author;
+        this.shop = shop;
+        shop.addReview(this);
     }
 
     public Integer getStars() {
@@ -52,6 +51,14 @@ public class Review {
         return author;
     }
 
+    public void setTheater(Theater theater) {
+        this.theater = theater;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
     public Restaurant getRestaurant() {
         return restaurant;
     }
@@ -59,7 +66,6 @@ public class Review {
     public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
     }
-
 
     @Override
     public String toString() {

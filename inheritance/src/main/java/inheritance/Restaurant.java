@@ -1,10 +1,8 @@
 package inheritance;
-
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Restaurant{
-
     private String name;
     private Integer stars;
     private String priceCategory;
@@ -21,7 +19,7 @@ public class Restaurant{
         return this.name;
     }
 
-    public Integer getStars() {
+    public int getStars() {
         return this.stars;
     }
 
@@ -33,6 +31,10 @@ public class Restaurant{
         return reviews.contains(review);
     }
 
+    public void update_Stars() {
+        stars = (int)(totalStars / numOfReviews);
+    }
+
     public void addReview(Review review) {
         Review newReview = review;
         newReview.setRestaurant(this);
@@ -42,13 +44,9 @@ public class Restaurant{
         update_Stars();
     }
 
-    public void update_Stars() {
-        stars = (int)(totalStars / numOfReviews);
-    }
-
     @Override
     public String toString() {
         String avgStars = stars == null ? "No Stars" : Integer.toString(stars);
-        return String.format("Restaurant Name: %s\nPrice: %s \nNumber of Stars: %s", name, priceCategory, stars);
+        return String.format("Restaurant Name: %s\nPrice: %s \nNumber of Stars: %s", name, priceCategory, avgStars);
     }
 }
